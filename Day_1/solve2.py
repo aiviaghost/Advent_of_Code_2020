@@ -1,8 +1,6 @@
 vals = []
-number = int(input())
-while number != -1:
+while (number := int(input())) != -1:
 	vals.append(number)
-	number = int(input())
 
 for i in range(len(vals)):
 	for j in range(len(vals)):
