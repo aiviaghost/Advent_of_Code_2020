@@ -4,7 +4,6 @@ while number != -1:
 	vals.append(number)
 	number = int(input())
 
-seen = set()
 for i in range(len(vals)):
 	for j in range(len(vals)):
 		for k in range(len(vals)):
