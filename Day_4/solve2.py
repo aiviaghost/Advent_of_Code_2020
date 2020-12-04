@@ -19,16 +19,16 @@ while (line := input()) != "-1":
 	count = 0
 	for field in ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"]:
 		if field in fields.keys():
-			if field == "byr" and int(fields[field]) in [i for i in range(1920, 2003)]:
+			if field == "byr" and int(fields[field]) in range(1920, 2003):
 				count += 1
-			elif field == "iyr" and int(fields[field]) in [i for i in range(2010, 2021)]:
+			elif field == "iyr" and int(fields[field]) in range(2010, 2021):
 				count += 1
-			elif field == "eyr" and int(fields[field]) in [i for i in range(2020, 2031)]:
+			elif field == "eyr" and int(fields[field]) in range(2020, 2031):
 				count += 1
 			elif field == "hgt":
-				if fields[field][-2 : ] == "cm" and int(fields[field][ : -2]) in [i for i in range(150, 194)]:
+				if fields[field][-2 : ] == "cm" and int(fields[field][ : -2]) in range(150, 194):
 					count += 1
-				elif fields[field][-2 : ] == "in" and int(fields[field][ : -2]) in [i for i in range(59, 77)]:
+				elif fields[field][-2 : ] == "in" and int(fields[field][ : -2]) in range(59, 77):
 					count += 1
 			elif field == "hcl" and fields[field][0] == '#' and len(fields[field]) == 7:
 				valid = True
