@@ -19,6 +19,6 @@ while (line := input()) != "":
 			lb = cmid + 1
 	cmid = (lb + rb) // 2
 	
-	max_id = max(8 * rmid + rb, max_id)
+	max_id = max(8 * rmid + cmid, max_id)
 
 print(max_id)
