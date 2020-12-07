@@ -1,10 +1,9 @@
-ids = []
 adj = {}
 while (line := input()) != "":
 	id = line[ : line.find("contain") - 1]
 	if id[-1] == 's':
 		id = id[ : -1]
-	ids.append(id)
+    
 	stuff = []
 	contained = line[line.find("contain") + len("contain") + 1 : ].split(", ")
 	for thing in contained:

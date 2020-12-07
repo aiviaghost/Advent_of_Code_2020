@@ -41,4 +41,4 @@ for id in ids:
 	if dfs(vis, id):
 		tot += 1
 
-print(tot - 1)
+print(tot - 1) # we don't want to count the "shiny gold bag" itself
