@@ -3,13 +3,13 @@ while (line := input()) != "":
 	grid.append(line)
 
 w, h = len(grid[0]), len(grid)
-print(w, h)
+
 def is_inside(x, y):
 	return 0 <= x < w and 0 <= y < h
 
 has_changed = True
 while has_changed:
-	changed = False
+	has_changed = False
 	next_grid = [[' '] * w for _ in range(h)]
 	for i in range(h):
 		for j in range(w):
@@ -21,13 +21,12 @@ while has_changed:
 
 			if grid[i][j] == 'L' and neighbours == 0:
 				next_grid[i][j] = '#'
-				changed = True
+				has_changed = True
 			elif grid[i][j] == '#' and neighbours >= 4:
 				next_grid[i][j] = 'L'
-				changed = True
+				has_changed = True
 			else:
 				next_grid[i][j] = grid[i][j]
-	has_changed = changed
 	grid = next_grid
 
 count = 0
