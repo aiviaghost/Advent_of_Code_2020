@@ -2,7 +2,7 @@ field_reqs = []
 while (line := input()) != "":
 	req1_min, req1_max = map(int, line[line.find(":") + 2 : line.find(" or")].split("-"))
 	req2_min, req2_max = map(int, line[line.find("or ") + 3 : ].split("-"))
-	field_reqs.append((range(req1_min, req1_max + 1), range(req2_min, req2_max + 1)))
+	field_reqs.append((range(req1_min, req1_max + 1), range(req2_min, req2_max + 1), line[ : line.find(":")]))
 
 input()
 my_ticket = input()
@@ -10,6 +10,7 @@ for _ in range(2):
 	input()
 
 valid_tickets = []
+valid_tickets.append([int(i) for i in my_ticket.split(",")])
 while (line := input()) != "":
 	ticket = [int(i) for i in line.split(",")]
 	for field in ticket:
